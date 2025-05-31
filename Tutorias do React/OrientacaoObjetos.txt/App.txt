@@ -1,0 +1,20 @@
+Essa é a pagina principal
+
+#Os imports das funções que estão nas outras partes, ele está puxando as funcoes e usando abaixo.
+import { Header } from './componentes/header'
+import { Aluno } from './componentes/aluno'
+import { Footer } from './componentes/footer'
+
+export default function App(){
+  return(
+    <div>
+     <Header titulo="Meu Projeto"/>
+
+      <Aluno nome="Goku" idade={43}/>
+      <Aluno nome="Freeza" idade={125}/>
+      <Aluno nome="Stive" idade={19}/>
+
+      <Footer/>
+    </div>
+  )
+}

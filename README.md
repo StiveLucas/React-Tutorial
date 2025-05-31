@@ -18,4 +18,3 @@ Porque o React só permite retornar um elemento por componente. Se você tentar 
 
 ###Os H(h1, h2, h3 ...)
  São os tamanhos das fontes, h1 é o maior.
-

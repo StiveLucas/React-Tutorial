@@ -1,0 +1,9 @@
+
+#Uma outra função qualquer. Essa aqui só cria um texto pequeno
+export function Footer(){
+    return(
+        <footer>
+            <h3>Bem vindo</h3>
+        </footer>
+    )
+}
