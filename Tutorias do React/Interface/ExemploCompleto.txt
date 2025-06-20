@@ -1,0 +1,77 @@
+
+#Aqui controla o fundo da interface
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+#Aqui controla o fundo da interface tambem.
+body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.conteiner{
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 14px;
+  justify-content: center;
+}
+
+.titulo{
+  color: aliceblue;
+  margin: 24px 0;
+}
+
+.from label{
+  color: aliceblue;
+  font-size: 19px;
+}
+
+.input{
+  width: 100%;
+  height: 40px;
+  border: 0;
+  border-radius: 4px;
+  font-size: 20px;
+  padding: 0 14px;
+  margin-bottom: 16px;
+  margin-top: 8px;
+}
+
+.botao{
+  width: 70%;
+  height: 48px;
+  background-color: blueviolet;
+  border: 100;
+  border-radius: 5px;
+  color: aliceblue;
+  font-size: 17px;
+  font-weight: bold;
+  display: block;
+  margin: 0 auto;
+}
+
+.resultado{
+  background-color: green;
+  color: aliceblue;
+  width: 70%;
+  max-width: 420px;
+  padding: 20px 20px;
+  border-radius: 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin: 4px;
+  font-size: 18px;
+  margin-bottom: 16px;
+  font-weight: bold;
+}

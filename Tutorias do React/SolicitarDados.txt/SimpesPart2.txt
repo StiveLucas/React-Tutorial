@@ -1,0 +1,74 @@
+import { useState } from 'react'
+
+interface InforAlunoProps{
+  nome: string;
+  idade: string;
+}
+
+export default function App(){
+  const [nome, setInput] = useState("")
+  const[idade, setIdade] = useState("")
+
+  const[infoAluno, setInfoAluno] = useState<InforAlunoProps>()
+
+  const[contador, setContador] = useState(0)
+
+  function mostrarAluno(){
+
+    setInfoAluno({
+      nome: nome,
+      idade: idade
+    })
+
+  }
+
+  function adcionar(){
+    setContador(valorAtual => valorAtual +1)
+
+  }
+
+  function subtrair(){
+    if(contador == 0){
+      return
+    }
+    
+    setContador(valorAtual => valorAtual -1)
+    
+  }
+
+  return(
+    <div>
+      <h1> Usando UseState</h1>
+
+      <input
+        placeholder="Digite o nome:"
+        value={nome}
+        onChange={ (e) => setInput(e.target.value)}
+      />
+
+      <br/>
+
+      <input
+        placeholder="Digite sua idade:"
+        value={idade}
+        onChange={ (e) => setIdade(e.target.value)}
+      />
+
+
+      <br/>
+
+      <button onClick={mostrarAluno}>Mostrar Aluno</button>
+
+      <hr/>
+
+      <h3>Bem vindo: {infoAluno?.nome} - Idade: {infoAluno?.idade}</h3>
+
+      <hr/>
+      <br />
+      <h1>Contador com useState</h1>
+
+      <button onClick={adcionar}>+</button> {contador} <button onClick={subtrair}>-</button>
+  
+    </div>
+  )
+}

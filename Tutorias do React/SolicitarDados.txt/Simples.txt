@@ -1,0 +1,50 @@
+import { useState } from 'react'
+
+export default function App(){
+    #Esses conts são basicamente a declaração de uma variável. EX:
+    const[nomeDaVariel, setNomeDaVariavelm] = useState(")
+
+  const [input, setInput] = useState("")
+  const[aluno, setAluno] = useState("")
+  #Esse tem o string e o number para dizer que só aceita esses tipos.
+  const [idade, setIdade] =useState<string | number>("")
+
+    #Função para mostrar na tela
+  function mostrarAluno(){
+    setAluno(input)
+    setIdade(idade)
+
+  }
+
+  return(
+    <div>
+      <h1> Usando UseState</h1>
+
+    #Local onde o usuário irá digitar.
+      <input
+        placeholder="Digite o nome:"
+        value={input}
+        onChange={ (e) => setInput(e.target.value)}
+      />
+
+      <br/>
+
+      <input
+        placeholder="Digite sua idade:"
+        value={idade}
+        onChange={ (e) => setIdade(e.target.value)}
+      />
+
+
+      <br/>
+
+      #Cria um botao, o onClick pega tudo que está escrito na funcão
+      <button onClick={mostrarAluno}>Mostrar Aluno</button>
+
+      <hr/>
+
+      <h3>Bem vindo: {aluno} - Idade: {idade}</h3>
+  
+    </div>
+  )
+}
